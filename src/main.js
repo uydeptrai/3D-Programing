@@ -139,7 +139,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   function playAudio() {
       initAudioContext();
-      fetch("./src/assets/audio.mp3")
+      fetch("src/assets/audio.mp3")
           .then(response => response.arrayBuffer())
           .then(buffer => audioContext.decodeAudioData(buffer))
           .then(audioBuffer => {
@@ -209,9 +209,9 @@ document.addEventListener("DOMContentLoaded", function() {
       // Thêm mã để reset lại trang hoặc game ở đây
   });
 });
-document.getElementById("popup2").innerHTML += `
-    <button id="restartButton">Restart Game</button>
-`;
+// document.getElementById("popup").innerHTML += `
+//     <button id="restartButton">Restart</button>
+// `;
 
 // document.getElementById("popup").innerHTML = `
 //     <p>Bạn đã thất bại!</p>
@@ -222,6 +222,8 @@ document.getElementById("popup2").innerHTML += `
 document.getElementById("restartButton").addEventListener("click", function() {
     window.location.reload();
 });
+
+
 
 function animate() {
   renderer.render(scene, camera);
