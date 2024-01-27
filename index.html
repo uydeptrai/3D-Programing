@@ -1,0 +1,126 @@
+<html lang="en">
+<head>
+  <link rel="icon" type="image/x-icon" href="./src/assets/7c17a2ed96d3d1f32154bd8603360e5c.ico/favicon-16x16.png">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Game</title>
+  <style>
+    body { margin: 0; }
+    #popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 20px;
+      border: 2px solid black;
+      border-radius: 10px;
+      z-index: 9999;
+      font-size: 60px;
+  }
+  #popup2 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    z-index: 9999;
+    font-size: 60px;
+}
+  #menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+#startButton, #musicButton {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+h1 {
+    color: white;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+    #instructions {
+      position: absolute;
+      top: 10;
+
+      width: 100%;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      color: #ffffff;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="instructions" style="margin-top: 30%;font-weight:900;font-size:40px">
+    W-A-S-D = Move
+  </div>
+  <div id="popup" style="display: none;">
+    <!-- Your popup content here -->
+    <p>Bạn đã về đích</p>
+    <button id="closeButton">Close</button>
+</div>
+<div id="popup2" style="display: none;">
+  <!-- Your popup content here -->
+  <p>Bạn đã thất bại</p>
+  <button id="closeButton">Close</button>
+</div>
+
+
+
+  <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "./threejs/build/three.module.js",
+        "cannon-es": "./cannonjs/cannon-es.js"
+      }
+    }
+  </script>
+
+  <div id="threejs"> </div>
+  <script src="./src/main.js" type="module"></script>
+  <div id="menu">
+    <button id="startButton">Bắt đầu game</button>
+    <button id="musicButton">Tắt nhạc</button>
+</div>
+
+<audio id="backgroundMusic" loop>
+  <source src="/src/assets/audio.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+
+
+</body>
+</html>
