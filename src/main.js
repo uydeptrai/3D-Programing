@@ -192,7 +192,7 @@ document.getElementById("restartButton").addEventListener("click", function() {
 
 
   // Tải lại trang
-  // window.location.reload();
+  window.location.reload();
 });
 document.addEventListener("DOMContentLoaded", function() {
   const menu = document.getElementById("menu");
