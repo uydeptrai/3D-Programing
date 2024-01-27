@@ -256,7 +256,7 @@ function animate() {
   }
   if (cubeBody.position.y < -5) { // Điều kiện rơi khỏi đường
     // Hiển thị popup
-    document.getElementById("popup2").style.display = "block";
+    // document.getElementById("popup2").style.display = "block";
     window.location.reload();
 }
 
