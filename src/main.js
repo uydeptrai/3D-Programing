@@ -192,7 +192,7 @@ document.getElementById("restartButton").addEventListener("click", function() {
 
 
   // Tải lại trang
-  window.location.reload();
+  window.location.reload(true);
 });
 document.addEventListener("DOMContentLoaded", function() {
   const menu = document.getElementById("menu");
@@ -258,8 +258,8 @@ function animate() {
   if (cubeBody.position.y < -5) { // Điều kiện rơi khỏi đường
     // Hiển thị popup
     // document.getElementById("popup2").style.display = "block";
-    window.location.reload();
-}
+    window.location.reload(true);
+  }
 
   requestAnimationFrame(animate);
 }
