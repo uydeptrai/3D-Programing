@@ -139,7 +139,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   function playAudio() {
       initAudioContext();
-      fetch("./src/assets/audio.mp3")
+      fetch("src/assets/audio.mp3")
           .then(response => response.arrayBuffer())
           .then(buffer => audioContext.decodeAudioData(buffer))
           .then(audioBuffer => {
