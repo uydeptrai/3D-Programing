@@ -189,8 +189,7 @@ document.getElementById("restartButton").addEventListener("click", function() {
       obstacleBody.position.set(posX, posY, posZ);
   }
 
-  // Ẩn popup
-  document.getElementById("popup").style.display = "none";
+
 
   // Tải lại trang
   window.location.reload();
@@ -258,7 +257,7 @@ function animate() {
   }
   if (cubeBody.position.y < -5) { // Điều kiện rơi khỏi đường
     // Hiển thị popup
-    document.getElementById("popup2").style.display = "block";
+    // document.getElementById("popup2").style.display = "block";
     window.location.reload();
 }
 
