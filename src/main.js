@@ -245,24 +245,28 @@ function animate() {
 
   // Check for collision between cubeBody and wallBody
   const contacts = world.contacts;
+  let collisionDetected = false;
   for (let i = 0; i < contacts.length; i++) {
       const contact = contacts[i];
       const bodyA = contact.bi;
       const bodyB = contact.bj;
-  
+
       if ((bodyA === cubeBody && bodyB === wallBody) || (bodyB === cubeBody && bodyA === wallBody)) {
-          // Player collided with the wall, show popup
-          document.getElementById("popup").style.display = "block";
+          // Player collided with the wall
+          collisionDetected = true;
+          break;
       }
   }
-  if (cubeBody.position.y < -5) { // Điều kiện rơi khỏi đường
-    // Hiển thị popup
-    // document.getElementById("popup2").style.display = "block";
-    window.location.reload(true);
+
+  if (cubeBody.position.y < -5 || collisionDetected) { // Điều kiện rơi khỏi đường hoặc va chạm với tường
+      // Hiển thị popup
+      document.getElementById("popup").style.display = "block";
+      return; // Dừng animate ở đây để ngăn việc vẽ lại khung hình tiếp theo
   }
 
   requestAnimationFrame(animate);
 }
+
 function addWall() {
   const wallShape = new CANNON.Box(new CANNON.Vec3(10, 10, 0.1)); // Adjust dimensions as needed
   wallBody = new CANNON.Body({ mass: 0 });
