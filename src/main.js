@@ -189,8 +189,7 @@ document.getElementById("restartButton").addEventListener("click", function() {
       obstacleBody.position.set(posX, posY, posZ);
   }
 
-  // Ẩn popup
-  document.getElementById("popup").style.display = "none";
+
 
   // Tải lại trang
   window.location.reload();
