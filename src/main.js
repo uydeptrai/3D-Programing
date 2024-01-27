@@ -218,9 +218,9 @@ document.addEventListener("DOMContentLoaded", function() {
 // `;
 
 // Thêm sự kiện cho nút "Restart" để reload lại trang
-document.getElementById("restartButton").addEventListener("click", function() {
-    window.location.reload();
-});
+// document.getElementById("restartButton").addEventListener("click", function() {
+//     window.location.reload();
+// });
 
 
 
