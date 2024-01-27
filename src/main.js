@@ -174,7 +174,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 const roadWidth = 10; // Đặt giá trị mong muốn của roadWidth
-const offset = 5; // Đặt giá trị mong muốn của offset
+const offset = 1; // Đặt giá trị mong muốn của offset
 
 document.getElementById("restartButton").addEventListener("click", function() {
   // Đặt lại vị trí của cube
